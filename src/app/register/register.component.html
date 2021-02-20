@@ -1,0 +1,30 @@
+{{diagnostic}}
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="microapp.name" name="name">
+</div>
+
+<div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" [(ngModel)]="microapp.description" name="description">
+</div>
+
+<div class="form-group">
+    <label for="type">Type</label>
+    <input type="text" class="form-control" id="type" [(ngModel)]="microapp.type" name="type">
+</div>
+
+<div class="form-group">
+    <label for="source">Source</label>
+    <input type="text" class="form-control" id="source" [(ngModel)]="microapp.source" name="source">
+</div>
+
+<div class="form-group">
+    <label for="power">Image</label>
+    <select class="form-control" id="power" required [(ngModel)]="microapp.icon" name="power">
+        <option *ngFor="let icon of icons" [value]="icon">{{icon}}</option>
+    </select>
+</div>
+
+<button class="form-group" class="btn btn-primary" type="submit" (click)="submit()">Submit
+</button>
